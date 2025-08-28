@@ -14,9 +14,6 @@ FROM node:20-slim
 
 WORKDIR /app
 
-# Install only production dependencies
-RUN npm install
-
 EXPOSE 3000
 
 CMD ["node", "dist/index.js"]
