@@ -15,7 +15,7 @@ FROM node:20-slim
 WORKDIR /app
 
 # Install only production dependencies
-RUN npm install --production
+RUN npm install
 
 EXPOSE 3000
 
