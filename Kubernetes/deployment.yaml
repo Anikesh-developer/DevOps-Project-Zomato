@@ -21,7 +21,8 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  zomato
-        image:  docker.io/anikesh372/zomato:v1
+        image:  docker.io/anikesh372/zomato:latest
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: 100m
