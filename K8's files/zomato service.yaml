@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zomato
+  namespace: default
+spec:
+  selector:
+    app: zomato
+  type: ClusterIP
+  ports:
+  - name: zomato
+    protocol: TCP
+    port: 80 # service port
+    targetPort: 3000 #container port
