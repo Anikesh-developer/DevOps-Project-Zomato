@@ -19,4 +19,8 @@ RUN npm install -g serve
 COPY --from=build /app/build ./build
 
 EXPOSE 3000
+<<<<<<< HEAD
 CMD ["serve", "-s", "build", "-l", "3000"]
+=======
+CMD ["serve", "-s", "build", "-l", "3000"]
+>>>>>>> 8f65f747d8d2b78784afc255b2c0989c21c7fc74

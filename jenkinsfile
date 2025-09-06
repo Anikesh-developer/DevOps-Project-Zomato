@@ -2,12 +2,20 @@ pipeline {
     agent any
 
     environment {
+<<<<<<< HEAD
         DOCKERHUB_CREDENTIALS = credentials('ede4069d-4e14-4ab2-ab14-7a48466bd8d9')
+=======
+        DOCKERHUB_CREDENTIALS = credentials('anikesh372') // Jenkins credentials
+>>>>>>> 8f65f747d8d2b78784afc255b2c0989c21c7fc74
         DOCKER_IMAGE = 'anikesh372/zomato:latest'
         NODE_ENV = 'production'
     }
 
     stages {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8f65f747d8d2b78784afc255b2c0989c21c7fc74
         stage('Checkout Code') {
             steps {
                 git branch: 'master', url: 'https://github.com/Anikesh-developer/DevOps-Project-Zomato.git'
@@ -17,6 +25,10 @@ pipeline {
         stage('Install NPM Packages') {
             steps {
                 sh 'npm install'
+<<<<<<< HEAD
+=======
+                
+>>>>>>> 8f65f747d8d2b78784afc255b2c0989c21c7fc74
             }
         }
 
@@ -41,11 +53,15 @@ pipeline {
 
     post {
         always {
+<<<<<<< HEAD
             script {
                 node {
                     sh 'docker logout'
                 }
             }
+=======
+            sh 'docker logout'
+>>>>>>> 8f65f747d8d2b78784afc255b2c0989c21c7fc74
         }
         success {
             echo 'Pipeline completed successfully!'
